@@ -1,0 +1,200 @@
+/*About Me Section*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+section{
+	width:100%;
+	padding:10px 0;
+}
+.aboutme{
+	font-family: 'Roboto', sans-serif;
+
+}
+.aboutme .maxwidth{
+	padding: 0 30px;
+}
+.aboutme .title{
+	position: relative;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	font-size:40px;
+	font-size: 600;
+	letter-spacing: 3px;
+	padding-bottom:20px;
+	margin-bottom: 60px;
+}
+.aboutme .title::before{
+	content:"";
+	position:absolute;
+	bottom: 0px;
+	left:50%;
+	width:180px;
+	height:3px;
+	background:#111;
+	transform: translate(-50%);
+}
+.aboutme .title::after{
+	content:"what I Am";
+	position: absolute;
+	bottom:-12px;
+	left:50%;
+	font-size:20px;
+	color:#047BD5;
+	padding:5px;
+	background:#fff;
+	transform:translate(-50%);
+}
+.aboutme .about-content{
+	display:flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.aboutme .about-content .left img{
+	height:400px;
+	width:400px;
+	object-fit: cover;
+	border-radius:10%;
+}
+.aboutme .about-content .left{
+	width:45%;
+}
+.aboutme .about-content .right{
+	width:55%;
+}
+.aboutme .about-content .right .text{
+	font-size:25px;
+	font-weight:600;
+	margin-bottom:10px;
+}
+.aboutme .about-content .right .text span{
+	color:#047BD5;
+}
+.aboutme .about-content .right p{
+	text-align:justify;
+	font-size: 20px;
+	font-weight:300;
+}
+.aboutme .about-content .right a{
+	display:inline-block;
+	border:2px solid #047BD5;
+	color:#fff;
+	background: #047BD5;
+	font-size:25px;
+	font-weight:600;
+	margin-top:10px;
+	padding:12px 36px;
+	margin-top: 20px;
+	border-radius:10px;
+	transition:all 0.3s ease;
+
+}
+.aboutme .about-content .right a:hover{
+	color:#047BD5;
+	background:none;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+/*footer styling*/
+footer{
+	border-top:3px solid #fff;
+	background:#047BD5;
+    font-weight: 800;
+    font-size:15px;
+	padding:20px 20px;
+	color:#fff;
+	text-align:center;
+	letter-spacing: 3px;
+	font-family: 'Roboto', sans-serif;
+}
+.copyrights a{
+	color:crimson;
+	text-decoration:none;
+}
+.copyrights a:hover{
+	text-decoration:underline;
+}
+footer .icons-list i{
+    padding:10px;
+    font-size: 20px;
+    color:white;
+}
+footer .contact li:first-child{
+    white-space: nowrap;
+}
+
+@media(max-width:1110px){
+	.aboutme .about-content .left img{
+		height:350px;
+		width:350px;
+	}
+	.aboutme .maxwidth{
+		padding:20px;
+	}
+}
+@media (max-width:1040px){
+	.aboutme .about-content .column{
+		width:50%;
+	}
+}
+@media(max-width: 850px){
+	.aboutme .about-content{
+		padding: 0px 20px;
+	}
+	.aboutme .about-content .left{
+   	display:flex;
+   	justify-content: center;
+   	margin: 0 auto 60px;
+   }
+   .aboutme .about-content .right{
+   	flex:100%;
+   }
+}
+@media(max-width:420px){
+	.aboutme .about-content{
+		padding:0px;
+	}
+}
+@media (max-width:830px){
+	.navbar .maxwidth{
+		padding:0px 40px;
+	}
+	.maxwidth{
+		padding:0 40px;
+	}
+	.navbar .menu{
+		position:fixed;
+		width: 100%;
+		height:100vh;
+		left:-100%;
+		top:0%;
+		background-color:#047BD5;
+		text-align:center;
+		padding-top:50px;
+		transition:all 0.3s ease;
+		z-index:999;
+	}
+	.navbar .menu li{
+		display: block;
+	}
+	.navbar .menu li a{
+		display:inline-block;
+		font-size: 25px;
+		margin: 20px 0;
+	}
+	.menubar{
+		display:block;
+		z-index:999;
+	}
+	.navbar .menu.active{
+		left:0%;
+		/*transform:rotate(360deg);*/
+	}
+	.menubar i.active:before{
+		content: "\f00d";
+	}
+}
